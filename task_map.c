@@ -20,7 +20,8 @@ mach_vm_address_t task_map() {
 void virtRead(mach_vm_address_t addr) {
     mach_vm_size_t read_size = PAGE_SIZE;
 
-    // Cannot use mach_vm_offset_t since for whatever reason mach_vm_read still uses vm_offset_t (unsigned long)
+    // Cannot use mach_vm_offset_t since for whatever reason mach_vm_read still 
+    // uses vm_offset_t (unsigned long)
     vm_offset_t data;
 
     mach_msg_type_number_t bytes;
